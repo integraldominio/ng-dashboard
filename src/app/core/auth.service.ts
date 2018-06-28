@@ -12,7 +12,6 @@ export class AuthService {
     return this.authState !== null;
   }
 
-  // 当前用户
   get currentUser() {
     return this.authenticated ? this.authState : null;
   }
@@ -21,21 +20,18 @@ export class AuthService {
     return this.afAuth.authState;
   }
 
-  // 当前登录用户id
   get currentUserId(): string {
     return this.authenticated ? this.authState.uid : '';
   }
 
-  // 用户账号
   get currentUserName(): string {
     if (!this.authState) {
       return 'Joni';
     } else {
-      return this.authState['displayName'] || '佚名';
+      return this.authState['displayName'] || 'user';
     }
   }
 
-  // 匿名用户
   get currentUserAnonymous(): boolean {
     return this.authenticated ? this.authState.anonymous : false;
   }
@@ -50,7 +46,8 @@ export class AuthService {
   }
 
   githubLogin() {
-    const provide = new firebase.auth.GithubAuthProvider();
+    return this.anonymousLogin();
+/*     const provide = new firebase.auth.GithubAuthProvider();
     return this.afAuth.auth
       .signInWithPopup(provide)
       .then(credential => {
@@ -58,10 +55,11 @@ export class AuthService {
         this.updateUserData();
       })
       .catch(error => console.log(error));
-  }
+ */  }
 
   googleLogin() {
-    const provider = new firebase.auth.GoogleAuthProvider();
+    return this.anonymousLogin();
+/*     const provider = new firebase.auth.GoogleAuthProvider();
     return this.afAuth.auth
       .signInWithPopup(provider)
       .then(credential => {
@@ -69,10 +67,11 @@ export class AuthService {
         this.updateUserData();
       })
       .catch(error => console.log(error));
-  }
+ */  }
 
   twitterLogin() {
-    const provider = new firebase.auth.TwitterAuthProvider();
+    return this.anonymousLogin();
+/*     const provider = new firebase.auth.TwitterAuthProvider();
     return this.afAuth.auth
       .signInWithPopup(provider)
       .then(credential => {
@@ -80,7 +79,7 @@ export class AuthService {
         this.updateUserData();
       })
       .catch(error => console.log(error));
-  }
+ */  }
 
   anonymousLogin() {
     return this.afAuth.auth
@@ -112,14 +111,14 @@ export class AuthService {
   }
 
   resetPassword(email: string) {
-    const fbAuth = firebase.auth();
+/*     const fbAuth = firebase.auth();
     return fbAuth
       .sendPasswordResetEmail(email)
       .then(() => {
-        console.log('密码已发到你的邮箱中');
+        console.log('ok');
       })
-      .catch(error => console.log('密码重置出错', error));
-  }
+      .catch(error => console.log('erro', error));
+ */  }
 
   /**
    *  退出登录
