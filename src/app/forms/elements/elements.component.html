@@ -1,0 +1,60 @@
+<div fxLayout="row wrap" class="form-group">
+  <div fxFlex.gt-sm="50" class="divide">
+    <mat-card>
+      <mat-card-title>Form Básico</mat-card-title>
+      <mat-card-content>
+        <form>
+          <mat-form-field class="display-block">
+            <input matInput placeholder="email">
+          </mat-form-field>
+          <mat-form-field class="display-block">
+            <input matInput placeholder="sennha">
+          </mat-form-field>
+          <mat-checkbox class="form-check">Lembre-me</mat-checkbox>
+          <button mat-raised-button color="primary" type="submit">Enviar</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex.gt-sm="50" class="divide">
+    <mat-card>
+      <mat-card-title>Form Básico</mat-card-title>
+      <mat-card-content>
+        <form>
+          <div fxLayout="row" fxLayoutAlign="center center">
+            <label>Email</label>
+            <mat-form-field fxFlex>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="center center">
+            <label>Senha</label>
+            <mat-form-field fxFlex>
+              <input matInput>
+            </mat-form-field>
+          </div>
+
+          <mat-checkbox class="form-check">Lembre-me</mat-checkbox>
+          <button mat-raised-button color="primary" type="submit">Enviar</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card fxFlex>
+    <mat-card-title>Form inline</mat-card-title>
+    <mat-card-content>
+      <form>
+        <mat-form-field>
+          <input matInput placeholder="email">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="senha">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Enviar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

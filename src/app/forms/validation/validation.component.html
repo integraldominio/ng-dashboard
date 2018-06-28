@@ -1,0 +1,63 @@
+<div fxLayout="row wrap" class="form-group">
+  <div fxFlex.gt-sm="50" class="divide">
+    <mat-card>
+      <mat-card-title>Registro</mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="registerFrom" (ngSubmit)="onSubmit()">
+          <mat-form-field class="display-block">
+            <input matInput placeholder="nome de usuário" formControlName="username" required minlength="4" maxlength="10">
+            <mat-error *ngIf="formErrors.username">{{formErrors.username}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="display-block">
+            <input matInput placeholder="email" formControlName="email" required>
+            <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="display-block">
+            <input matInput placeholder="senha" formControlName="password" [type]="hide ? 'password' : 'text'" required>
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </mat-form-field>
+          <mat-form-field class="display-block">
+            <input matInput placeholder="senha novamente" formControlName="password_confirm" required>
+          </mat-form-field>
+          <mat-form-field class="display-block">
+            <input matInput placeholder="telefone" formControlName="phone" minlength="11" maxlength="11">
+            <mat-hint align="end">{{registerFrom.value.phone?.length || 0}}/11</mat-hint>
+          </mat-form-field>
+          <mat-checkbox class="form-check" formControlName="agree">Eu concordo</mat-checkbox>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!registerFrom.valid">Enviar</button>
+          <button mat-raised-button color="default" type="button" (click)="rebuildForm()">Limpar</button>
+        </form>
+
+        <p>{{registerFrom.value | json}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex.gt-sm="50" class="divide">
+    <mat-card>
+      <mat-card-title>Contato</mat-card-title>
+      <mat-card-content>
+        <form #formContact="ngForm">
+          <mat-form-field class="display-block">
+            <input matInput placeholder="nome" name="name" ngModel required minlength="4" maxlength="10">
+          </mat-form-field>
+          <mat-form-field class="display-block">
+            <input matInput placeholder="email" name="email" ngModel required>
+          </mat-form-field>
+          <mat-form-field class="display-block">
+            <input matInput placeholder="site" name="website ngModel" required>
+          </mat-form-field>
+          <mat-form-field class="display-block">
+            <textarea matInput placeholder="mensagem" rows="3" name="message" ngModel required></textarea>
+          </mat-form-field>
+          <mat-checkbox class="form-check">Eu condordo</mat-checkbox>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!formContact.valid">Enviar</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<!--
+<button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>close</mat-icon>
+  </button> -->

@@ -1,0 +1,52 @@
+<div class="customizer-container" fxLayout="column">
+  <div class="m-t-10">Barra principal</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.colorClasses.header"
+                   (ngModelChange)="onSettingsChange()">
+    <mat-radio-button class="customizer-radio-button" *ngFor="let color of _colors" [value]="'stbui-background-'+color">{{color}}
+    </mat-radio-button>
+  </mat-radio-group>
+
+  <div class="m-t-10">Logo</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.colorClasses.brand"
+                   (ngModelChange)="onSettingsChange()">
+    <mat-radio-button class="customizer-radio-button" *ngFor="let color of _colors" [value]="'stbui-background-'+color">{{color}}
+    </mat-radio-button>
+  </mat-radio-group>
+
+  <div class="m-t-10">Sidebar</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.colorClasses.navigation"
+                   (ngModelChange)="onSettingsChange()">
+    <mat-radio-button class="customizer-radio-button" *ngFor="let color of _colors" [value]="'stbui-background-'+color">{{color}}
+    </mat-radio-button>
+  </mat-radio-group>
+
+  <div class="m-t-10">Layout</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.mode"
+                   (ngModelChange)="onSettingsChange()" fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="boxed">Largura fixa</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="fullwidth">Tela cheia</mat-radio-button>
+  </mat-radio-group>
+
+  <div class="m-t-10">Navegação</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.navigation"
+                   (ngModelChange)="onSettingsChange()" fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="left">esquerda</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="right">direita</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="none">esconder</mat-radio-button>
+  </mat-radio-group>
+
+  <div class="m-t-10">header</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.header"
+                   (ngModelChange)="onSettingsChange()" fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="below">mostrar</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="none">esconder</mat-radio-button>
+  </mat-radio-group>
+
+  <div class="m-t-10">footer</div>
+  <mat-radio-group class="customizer-radio-group" [(ngModel)]="settings.layout.footer"
+                   (ngModelChange)="onSettingsChange()" fxLayout="row">
+    <mat-radio-button class="customizer-radio-button" value="below">abaixo</mat-radio-button>
+    <mat-radio-button class="customizer-radio-button" value="none">esconder</mat-radio-button>
+  </mat-radio-group>
+
+</div>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg width='1400' height='800' viewBox='0 0 700 400' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<defs>
+    <linearGradient id='blue_grad'>
+        <stop class='stop1' offset='0%' stop-color='#26c6da' />
+        <stop class='stop2' offset='23%' stop-color='#26c6da' />
+        <stop class='stop3' offset='43%' stop-color='#00e5ff' />
+        <stop class='stop4' offset='63%' stop-color='#00e5ff' />
+        <stop class='stop5' offset='100%' stop-color='#26c6da' />
+    </linearGradient>
+
+    <filter id='css_drop_shadow'>
+      <feFlood flood-color='#212121' />
+      <feComposite operator='in' in='SourceAlpha' />
+      <feGaussianBlur stdDeviation='3' />
+      <feOffset dx='3' dy='5' />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in='SourceGraphic' />
+      </feMerge>
+    </filter>
+
+    <filter id='g_light'>
+        <feDiffuseLighting result='diffOut' in='SourceGraphic' diffuseConstant='1.2' lighting-color='white'>
+            <fePointLight x='400' y='400' z='250' pointsAtX='0' pointsAtY='0' pointsAtZ='0' />
+        </feDiffuseLighting>
+        <feComposite in='SourceGraphic' in2='diffOut' operator='arithmetic' k1='0' k2='1' k3='0' k4='0' />
+    </filter>
+</defs>
+<g filter='url(#g_light)'>
+
+<rect x='0' y='0' width='800' height='500' style='fill: #263238;' filter='url(#)'></rect>
+<polygon points='400, 800, 800, 800, 225, 0, 400, 0' filter='url(#css_drop_shadow)' fill='url(#blue_grad)' id='triangle'></polygon>
+<polygon points='400, 800, 800, 800, 225, 0, 400, 0' filter='url(#css_drop_shadow)' fill='url(#blue_grad)' id='triangle2'></polygon>
+<polygon points='0, 225, 0, 400, 800, 400, 800, 800' filter='url(#css_drop_shadow)' fill='url(#blue_grad)' id='triangle3'></polygon>
+<ellipse cx='125' cy='125' rx='100' ry='100' filter='url(#css_drop_shadow)' style='fill: #37474F;'></ellipse>
+<ellipse cx='125' cy='125' rx='45' ry='45' filter='url(#css_drop_shadow)' style='fill: #26C6DA;'></ellipse>
+</g>
+</svg>
