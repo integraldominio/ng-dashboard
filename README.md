@@ -1,6 +1,10 @@
 # ng-dashboard
 Angular 6 dashboard
 
+<p align="center">
+    <img width="800" alt="Springboot JWT Starter" src="docs/dash01.png">
+</p>
+
 # Angular
 This project was generated with Angular CLI version 6.0.5.
 
