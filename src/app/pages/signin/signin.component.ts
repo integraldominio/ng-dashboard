@@ -86,7 +86,7 @@ export class SigninComponent implements OnInit {
   signInWithEmail() {
     this.auth
       .emailLogin(this.userForm.value['email'], this.userForm.value['password'])
-      .catch(error => console.log('邮箱登录出错：', error));
+      .catch(error => console.log('erro', error));
   }
 
   signInAnonymously() {
