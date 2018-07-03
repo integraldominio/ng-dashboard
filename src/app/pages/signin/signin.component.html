@@ -1,15 +1,11 @@
-<div class="signin-container" fxLayout="row">
+<div class="signin-container" >
 
-  <div class="signin-cover" fxFlex="20" fxFlex.gt-xs="50">
-    <div fxLayout="column" fxLayoutAlign="center center" style="height: 100%;">
-      <img src="assets/images/logo.jpg" alt="">
-    </div>
-  </div>
+  <div class="signin-content mat-elevation-z12">
 
-  <div class="signin-content mat-elevation-z12" fxFlex="80" fxFlex.gt-xs="50">
-    <mat-card-title>Login
-      <a class="redirect" [routerLink]="['/sigup']">sigup</a>
-    </mat-card-title>
+      <div fxLayoutAlign="center center">
+          <img src="assets/logo.svg" style="width: 84px; padding: 0px 0 10px;">
+     </div>
+
 
     <form [formGroup]="userForm" (ngSubmit)="login()">
       <mat-form-field class="display-block">
@@ -23,13 +19,22 @@
       </mat-form-field>
 
       <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">Entrar</button>
+
+      <div class="m-b-15" fxLayout="row" fxLayoutAlign="center center">
+          <mat-checkbox class="remember-me">Lembre-me
+
+          </mat-checkbox>
+        </div>
+
+
     </form>
 
+
     <div class="other-sign">
-      Outras formas de login
+        Outras Formas de Login
     </div>
 
-    <button class="mat-raised-button capsule-button google-button m-b-15" (click)="signInWithGoogle()">
+    <button class="mat-raised-button capsule-button google-button m-b-10" (click)="signInWithGoogle()">
       <span class="capsule-button-wrapper">
         <div class="capsule-button-icon">
           <img src="assets/icon/google-plus.svg">
@@ -38,7 +43,7 @@
       </span>
     </button>
 
-    <button class="mat-raised-button capsule-button github-button m-b-15" (click)="signInWithGithub()">
+    <button class="mat-raised-button capsule-button github-button m-b-10" (click)="signInWithGithub()">
       <span class="capsule-button-wrapper">
         <div class="capsule-button-icon">
           <img src="assets/icon/github-logo.svg">
@@ -56,7 +61,7 @@
       </span>
     </button>
 
-
+    <a class="redirect" [routerLink]="['/sigup']">Ainda não tem registro? Registre-se aqui.</a>
 
   </div>
 </div>

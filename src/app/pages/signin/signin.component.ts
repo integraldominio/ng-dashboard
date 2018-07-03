@@ -21,9 +21,9 @@ export class SigninComponent implements OnInit {
     },
     password: {
       required: 'Digite senha',
-      pattern: 'Senha deve conter números e letras.',
-      minlength: 'Mínimo de 5 caracteres.',
-      maxlength: 'Máximo de 25 caracteres.'
+      pattern: 'Deve conter números e letras.',
+      minlength: 'Mínimo 5 caracteres.',
+      maxlength: 'Máximo 25 caracteres.'
     }
   };
 
