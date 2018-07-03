@@ -8,6 +8,9 @@
 
 
     <form [formGroup]="userForm" (ngSubmit)="login()">
+
+        <div class="register-content" fxLayout="column" fxLayoutAlign="start stretch">
+
       <mat-form-field class="display-block">
         <input type="email" placeholder="email" formControlName="email" required matInput>
         <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
@@ -23,9 +26,9 @@
           </mat-checkbox>
         </div>
 
-        <button class="capsule-button m-b-10" mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">Entrar</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">Entrar</button>
 
-
+      </div>
 
     </form>
 
