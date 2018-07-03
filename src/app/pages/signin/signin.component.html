@@ -3,7 +3,7 @@
   <div class="signin-content mat-elevation-z12">
 
       <div fxLayoutAlign="center center">
-          <img src="assets/logo.svg" style="width: 84px; padding: 0px 0 10px;">
+          <img src="assets/logo.svg" style="width: 84px; padding: 0px 0 0px;">
      </div>
 
 
@@ -18,13 +18,13 @@
         <mat-error *ngIf="formErrors.password">{{formErrors.password}}</mat-error>
       </mat-form-field>
 
-      <button class=" m-b-10" mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">Entrar</button>
-
       <div class="m-b-15" fxLayout="row" fxLayoutAlign="center center">
           <mat-checkbox class="remember-me">Lembre-me
-
           </mat-checkbox>
         </div>
+
+        <button class="capsule-button m-b-10" mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">Entrar</button>
+
 
 
     </form>

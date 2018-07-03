@@ -1,13 +1,10 @@
 <div class="signin-container" fxLayout="row">
-  <div class="signin-cover" fxFlex="20" fxFlex.gt-xs="50">
-    <div fxLayout="column" fxLayoutAlign="center center" style="height: 100%;">
-      <img src="assets/images/logo.jpg" alt="">
+
+  <div class="signin-content mat-elevation-z12" >
+
+    <div fxLayoutAlign="center center">
+        <img src="assets/logo.svg" style="width: 84px; padding: 0px 0 0px;">
     </div>
-  </div>
-  <div class="signin-content mat-elevation-z12" fxFlex="80" fxFlex.gt-xs="50">
-    <mat-card-title>Registrar
-      <a class="redirect" [routerLink]="['/sigin']">Sigin</a>
-    </mat-card-title>
 
     <form #form="ngForm" (ngSubmit)="register()">
       <div class="register-content" fxLayout="column" fxLayoutAlign="start stretch">
@@ -25,7 +22,7 @@
         </mat-form-field>
         <div class="m-b-15" fxLayout="row" fxLayoutAlign="center center">
           <mat-checkbox class="remember-me">remember-me
-            <a href="javascript:;">Entrar</a>
+
           </mat-checkbox>
         </div>
         <button color="primary" mat-raised-button [disabled]="!form.valid">Criar conta</button>
@@ -34,7 +31,7 @@
     </form>
 
     <div class="other-sign">
-      我要登陆
+      Outras formas de login
     </div>
 
     <button class="mat-raised-button capsule-button google-button m-b-15" (click)="signInWithGoogle()">
@@ -42,7 +39,7 @@
         <div class="capsule-button-icon">
           <img src="assets/icon/google-plus.svg">
         </div>
-        <span class="capsule-button-text">Google 账号登录</span>
+        <span class="capsule-button-text">Google</span>
       </span>
     </button>
 
@@ -51,7 +48,7 @@
         <div class="capsule-button-icon">
           <img src="assets/icon/github-logo.svg">
         </div>
-        <span class="capsule-button-text">Github 账号登录</span>
+        <span class="capsule-button-text">Github</span>
       </span>
     </button>
 
@@ -60,18 +57,20 @@
         <div class="capsule-button-icon">
           <img src="assets/icon/facebook.svg">
         </div>
-        <span class="capsule-button-text">Facebook 账号登录</span>
+        <span class="capsule-button-text">Facebook</span>
       </span>
     </button>
 
-    <button class="mat-raised-button capsule-button any-button" (click)="signInAnonymously()">
+<!--     <button class="mat-raised-button capsule-button any-button" (click)="signInAnonymously()">
       <span class="capsule-button-wrapper">
         <div class="capsule-button-icon">
           <img src="assets/icon/firebase.svg">
         </div>
         <span class="capsule-button-text">游客 账号登录</span>
       </span>
-    </button>
+    </button> -->
+
+    <a class="redirect" [routerLink]="['/sigin']">Já temconta? Clique aqui para entrar</a>
 
   </div>
 </div>
